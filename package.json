@@ -4,9 +4,9 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts,json --exec \"node --loader ts-node/esm src/index.ts\"",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "dev": "node init && nodemon --watch src --ext ts,json --exec \"node --loader ts-node/esm src/index.ts\"",
+    "build": "node init && tsc",
+    "start": "node init && node dist/index.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -14,7 +14,8 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.19.2"
+    "mongoose": "^8.19.2",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
