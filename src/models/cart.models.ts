@@ -1,4 +1,3 @@
-// cart item schema
 import mongoose from "mongoose";
 
 const CartItemSchema = new mongoose.Schema({
@@ -27,7 +26,7 @@ const CartItemSchema = new mongoose.Schema({
   },
 }, { timestamps: true });
 
-// cart schema 
+
 const CartSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
